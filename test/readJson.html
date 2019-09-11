@@ -8,31 +8,17 @@
 <script type="text/javascript" src="https://joshpolancos.github.io/test/data.json"></script>
 
 <script>
-var paragraph = document.querySelector('p');
+userObj = { "name":"Josh"};
 
-var requestURL = "https://joshpolancos.github.io/test/data.json";
-var request = new XMLHttpRequest();
+for (users in userObj){
+  document.getElementById("demo").innerHTML += userObj[users];
 
-request.open('GET',requestURL);
-request.responseType = 'json';
-request.send();
-  
-request.onload = function() {
-  var users = request.response;
-  getUsers(users);
-}
-
-function getUsers(jsonObj){
-  var myP = document.createElement('p');
-  myP.textContent = jsonObj.name;
-  paragraph.appendChild(myP);
-}
 </script>    
 
 </head>
 
 <body>
 <h1>Hello</h1>
-  <p></p>
+  <p id="demo"></p>
 </body>
 </html>
