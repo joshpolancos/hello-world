@@ -6,16 +6,14 @@
   <title>Josh</title>
   <LINK href="styles.css" rel="stylesheet" type="text/css">
     <script>
-     function reqListener () {
-       var test = this.responseText;
-       document.getElementById("demo").innerHTML = test;
-  //console.log(this.responseText);
-}
-
-var oReq = new XMLHttpRequest();
-oReq.addEventListener("load", reqListener);
-oReq.open("GET", "https://joshpolancos.github.io/file.txt");
-oReq.send();
+     fetch('https://joshpolancos.github.io/file.txt')
+  .then(function(response) {
+    return response.text();
+  })
+  .then(function(myJson) {
+    //console.log(JSON.stringify(myJson));
+       console.log((myJson));
+  });
 
     </script>
 </head>
