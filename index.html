@@ -7,7 +7,9 @@
   <LINK href="styles.css" rel="stylesheet" type="text/css">
     <script>
      function reqListener () {
-  console.log(this.responseText);
+       var test = this.responseText;
+       document.getElementById("demo").innerHTML = test;
+  //console.log(this.responseText);
 }
 
 var oReq = new XMLHttpRequest();
@@ -25,5 +27,6 @@ T
 <!-- Change this code here by copy and pasting your template on line 15 -->
 <p>Welcome to your first GitHub Pages website!</p>
   <h1>Hello World</h1>
+  <p id="demo"></p>
 </body>
 </html>
