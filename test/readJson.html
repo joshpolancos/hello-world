@@ -15,13 +15,14 @@
 </body>
 
 <script>
-userObj = { "resources":[
- {"name":"Josh"},
- {"name": "Resource2"},
- {"name": "Resource3"}]}
+userObj = {
+ "name":"Josh",
+ "name": "Resource2",
+ "name": "Resource3"
+};
  
-for (users in userObj["resources"]){
- document.getElementById("demo").innerHTML += userObj[users];
+for (names in userObj){
+ document.getElementById("demo").innerHTML += userObj[names];
 }
 </script>  
 
