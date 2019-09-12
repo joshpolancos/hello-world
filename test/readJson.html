@@ -20,7 +20,7 @@ userObj = { "resources":[
  {"name": "Resource2"},
  {"name": "Resource3"}]}
  
-for (users in userObj){
+for (users in userObj["resources"]){
  document.getElementById("demo").innerHTML += userObj[users];
 }
 </script>  
